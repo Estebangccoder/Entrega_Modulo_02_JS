@@ -78,18 +78,7 @@ switch (menu) {
 //Crearemos la base de datos inicial
 
 let BDMascotas = [
-  {
-    "nombre": "luna",
-    "especie": "perro",
-    "raza": "labrador retriever",
-    "edad": 6,
-    "pesoKg": 12,
-    "estado": "estable",
-    "nombrePropietario": "juan pérez",
-    "docPropietario": "123456789",
-    "telContacto": "123-456-7890",
-    "emailPropietario": "juanperez@example.com"
-  },
+
   {
     "nombre": "max",
     "especie": "gato",
@@ -100,7 +89,8 @@ let BDMascotas = [
     "nombrePropietario": "maría gómez",
     "docPropietario": "987654321",
     "telContacto": "987-654-3210",
-    "emailPropietario": "mariagomez@example.com"
+    "emailPropietario": "mariagomez@example.com",
+    "img":"./public/img/siames.webp"
   },
   {
     "nombre": "rocky",
@@ -112,7 +102,8 @@ let BDMascotas = [
     "nombrePropietario": "pedro gonzález",
     "docPropietario": "456789123",
     "telContacto": "456-789-1230",
-    "emailPropietario": "pedrogonzalez@example.com"
+    "emailPropietario": "pedrogonzalez@example.com",
+    "img":"./public/img/bulldog.webp"
   },
   {
     "nombre": "milo",
@@ -124,7 +115,8 @@ let BDMascotas = [
     "nombrePropietario": "ana martínez",
     "docPropietario": "789123456",
     "telContacto": "789-123-4560",
-    "emailPropietario": "anamartinez@example.com"
+    "emailPropietario": "anamartinez@example.com",
+    "img":"./public/img/poodle.webp"
   },
   {
     "nombre": "lucky",
@@ -136,7 +128,8 @@ let BDMascotas = [
     "nombrePropietario": "carla rodríguez",
     "docPropietario": "321654987",
     "telContacto": "321-654-9870",
-    "emailPropietario": "carlarodriguez@example.com"
+    "emailPropietario": "carlarodriguez@example.com",
+    "img":"./public/img/golden_retriever.webp"
   },
   {
     "nombre": "whiskers",
@@ -148,7 +141,8 @@ let BDMascotas = [
     "nombrePropietario": "javier lópez",
     "docPropietario": "654987321",
     "telContacto": "654-987-3210",
-    "emailPropietario": "javierlopez@example.com"
+    "emailPropietario": "javierlopez@example.com",
+    "img":"./public/img/persa.webp"
   },
   {
     "nombre": "simba",
@@ -160,7 +154,8 @@ let BDMascotas = [
     "nombrePropietario": "sofía garcía",
     "docPropietario": "159263487",
     "telContacto": "159-263-4870",
-    "emailPropietario": "sofiagarcia@example.com"
+    "emailPropietario": "sofiagarcia@example.com",
+    "img":"./public/img/maine_coon.webp"
   },
   {
     "nombre": "buddy",
@@ -172,7 +167,8 @@ let BDMascotas = [
     "nombrePropietario": "luisa ramírez",
     "docPropietario": "369258147",
     "telContacto": "369-258-1470",
-    "emailPropietario": "luisaramirez@example.com"
+    "emailPropietario": "luisaramirez@example.com",
+    "img":"./public/img/beagle.webp"
   },
   {
     "nombre": "coco",
@@ -184,7 +180,8 @@ let BDMascotas = [
     "nombrePropietario": "carlos sánchez",
     "docPropietario": "258369147",
     "telContacto": "258-369-1470",
-    "emailPropietario": "carlossanchez@example.com"
+    "emailPropietario": "carlossanchez@example.com",
+    "img":"./public/img/chihuahua.webp"
   },
   {
     "nombre": "oreo",
@@ -196,7 +193,8 @@ let BDMascotas = [
     "nombrePropietario": "isabela diaz",
     "docPropietario": "852147963",
     "telContacto": "852-147-9630",
-    "emailPropietario": "isabeladiaz@example.com"
+    "emailPropietario": "isabeladiaz@example.com",
+    "img":"./public/img/siames2.webp"
   },
   {
     "nombre": "toby",
@@ -208,8 +206,22 @@ let BDMascotas = [
     "nombrePropietario": "isabela diaz",
     "docPropietario": "745896321",
     "telContacto": "745-896-3210",
-    "emailPropietario": "elenalopez@example.com"
-  }
+    "emailPropietario": "elenalopez@example.com",
+    "img":"./public/img/yorkshire_terrier.webp"
+  },
+  {
+    "nombre": "luna",
+    "especie": "perro",
+    "raza": "labrador retriever",
+    "edad": 6,
+    "pesoKg": 12,
+    "estado": "estable",
+    "nombrePropietario": "juan pérez",
+    "docPropietario": "123456789",
+    "telContacto": "123-456-7890",
+    "emailPropietario": "juanperez@example.com",
+    "img":"./public/img/labrador.webp"
+  },
 ]
 
 
@@ -359,3 +371,68 @@ function eliminarMascota() {
 }
 
 menuPrincipal()
+
+
+
+
+
+
+
+
+const header = document.querySelector("header")
+
+const titulo = document.createElement("h1")
+
+
+titulo.textContent = "Sistema de Gestión para Veterinaria"
+// titulo.setAttribute("id","titulo-principal") Forma anterior de hacerlo
+titulo.id = "titulo-principal"
+// titulo.style.color="blue" pone css en el html eso no lo queremos hacer
+titulo.classList.add("text-primary", "py-2")
+titulo.classList.add("text-center")
+titulo.classList.add("bg-dark")
+
+header.appendChild(titulo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const main = document.querySelector("main")
+
+
+ 
+BDMascotas.forEach(mascota => {
+
+  main.innerHTML +=`
+ <section class="card text-capitalize d-flex justi" style="width: 18rem;">
+ <img src="${mascota.img}" id="imagen_catalogo" class="card-img-top w-100 h-100" alt="Foto animal">
+ <div class="card-body">
+     <h3 class="card-title text-center">${mascota.nombre}</h3>
+     <span class="fw-bold">Raza:</span> <span>${mascota.raza}</span> <br>
+     <span class="fw-bold">Edad:</span> <span>${mascota.edad} años</span>
+     <p> 
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nesciunt delectus nemo qui quo,
+         tempor...
+     </p>
+     <div class="d-flex justify-content-center">
+         <button class="btn btn-primary" type="button">adoptame</button>
+     </div>
+ </div>
+ </section>
+
+ `
+  
+});
+ 
