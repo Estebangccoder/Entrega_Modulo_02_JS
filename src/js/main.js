@@ -417,7 +417,7 @@ BDMascotas.forEach(mascota => {
 
   main.innerHTML +=`
  <section class="card text-capitalize d-flex justi" style="width: 18rem;">
- <img src="${mascota.img}" id="imagen_catalogo" class="card-img-top w-100 h-100" alt="Foto animal">
+ <img src="${mascota.img}" id="imagen_catalogo" class="card-img-top w-100 h-100 object-fit-cover border rounded" alt="Foto animal">
  <div class="card-body">
      <h3 class="card-title text-center">${mascota.nombre}</h3>
      <span class="fw-bold">Raza:</span> <span>${mascota.raza}</span> <br>
