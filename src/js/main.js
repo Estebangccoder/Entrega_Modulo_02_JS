@@ -388,14 +388,24 @@ titulo.textContent = "Sistema de Gestión para Veterinaria"
 // titulo.setAttribute("id","titulo-principal") Forma anterior de hacerlo
 titulo.id = "titulo-principal"
 // titulo.style.color="blue" pone css en el html eso no lo queremos hacer
-titulo.classList.add("text-primary", "py-2")
-titulo.classList.add("text-center")
-titulo.classList.add("bg-dark")
-
+titulo.classList.add("text-primary", "py-2","text-center","bg-dark")
+const nav = document.createElement("nav")
 header.appendChild(titulo)
+header.appendChild(nav)
+header.classList.add("d-flex", "justify-content-space-between")
 
 
 
+nav.innerHTML = `<div class="dropdown">
+<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Dropdown
+</button>
+<ul class="dropdown-menu">
+  <li><button class="dropdown-item" type="button">Action</button></li>
+  <li><button class="dropdown-item" type="button">Another action</button></li>
+  <li><button class="dropdown-item" type="button">Something else here</button></li>
+</ul>
+</div>`
 
 
 
