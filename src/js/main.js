@@ -370,7 +370,7 @@ function eliminarMascota() {
   menuPrincipal()
 }
 
-menuPrincipal()
+// menuPrincipal()
 
 
 
@@ -379,35 +379,33 @@ menuPrincipal()
 
 
 
-const header = document.querySelector("header")
+// const header = document.querySelector("header")
 
-const titulo = document.createElement("h1")
-
-
-titulo.textContent = "Sistema de Gestión para Veterinaria"
-// titulo.setAttribute("id","titulo-principal") Forma anterior de hacerlo
-titulo.id = "titulo-principal"
-// titulo.style.color="blue" pone css en el html eso no lo queremos hacer
-titulo.classList.add("text-primary", "py-2","text-center","bg-dark")
-const nav = document.createElement("nav")
-header.appendChild(titulo)
-header.appendChild(nav)
-header.classList.add("d-flex", "justify-content-space-between")
+// const titulo = document.createElement("h1")
 
 
-
-nav.innerHTML = `<div class="dropdown">
-<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  Dropdown
-</button>
-<ul class="dropdown-menu">
-  <li><button class="dropdown-item" type="button">Action</button></li>
-  <li><button class="dropdown-item" type="button">Another action</button></li>
-  <li><button class="dropdown-item" type="button">Something else here</button></li>
-</ul>
-</div>`
+// titulo.textContent = "Sistema de Gestión para Veterinaria"
+// // titulo.setAttribute("id","titulo-principal") Forma anterior de hacerlo
+// titulo.id = "titulo-principal"
+// // titulo.style.color="blue" pone css en el html eso no lo queremos hacer
+// titulo.classList.add("text-primary", "py-2","text-center","bg-dark")
+// const nav = document.createElement("nav")
+// header.appendChild(titulo)
+// header.appendChild(nav)
+// header.classList.add("d-flex", "justify-content-space-between")
 
 
+
+// nav.innerHTML = `<div class="dropdown">
+// <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+//   Dropdown
+// </button>
+// <ul class="dropdown-menu">
+//   <li><button class="dropdown-item" type="button">Action</button></li>
+//   <li><button class="dropdown-item" type="button">Another action</button></li>
+//   <li><button class="dropdown-item" type="button">Something else here</button></li>
+// </ul>
+// </div>`
 
 
 
@@ -419,30 +417,35 @@ nav.innerHTML = `<div class="dropdown">
 
 
 
-const main = document.querySelector("main")
+
+
+// const main = document.querySelector("main")
 
 
  
-BDMascotas.forEach(mascota => {
+// BDMascotas.forEach(mascota => {
 
-  main.innerHTML +=`
- <section class="card text-capitalize d-flex justi" style="width: 18rem;">
- <img src="${mascota.img}" id="imagen_catalogo" class="card-img-top w-100 h-100 object-fit-cover border rounded" alt="Foto animal">
- <div class="card-body">
-     <h3 class="card-title text-center">${mascota.nombre}</h3>
-     <span class="fw-bold">Raza:</span> <span>${mascota.raza}</span> <br>
-     <span class="fw-bold">Edad:</span> <span>${mascota.edad} años</span>
-     <p> 
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nesciunt delectus nemo qui quo,
-         tempor...
-     </p>
-     <div class="d-flex justify-content-center">
-         <button class="btn btn-primary" type="button">adoptame</button>
-     </div>
- </div>
- </section>
-
- `
+//   main.innerHTML +=`
+//   <section class="card text-capitalize d-flex justi" style="width: 18rem;">
+//   <img src="${mascota.img}" id="imagen_catalogo" class="card-img-top w-100 h-100 object-fit-cover border rounded" alt="Foto animal">
+//   <div class="card-body">
+//       <h3 class="card-title text-center">${mascota.nombre}</h3>
+//       <span class="fw-bold">Raza:</span> <span>${mascota.raza}</span> <br>
+//       <span class="fw-bold">Edad:</span> <span>${mascota.edad} años</span>
+//       <p> 
+//           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nesciunt delectus nemo qui quo,
+//           tempor...
+//       </p>
+//       <div class="d-flex justify-content-center">
+//           <button class="btn btn-primary" type="button">adoptame</button>
+//       </div>
+//   </div>
+//   </section>
+//  `
   
-});
+// });
  
+
+const nombre = document.querySelector("#name1")
+
+nombre.textContent = BDMascotas[0].nombre
